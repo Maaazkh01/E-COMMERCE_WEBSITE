@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Stitch Design</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700;900&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="user-account.css" />
+</head>
+
+<body class="bg-white">
+    <div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden">
+        <div class="layout-container flex h-full grow flex-col">
+
+            <!-- Header -->
+            <header class="flex items-center justify-between whitespace-nowrap border-b border-gray-200 px-10 py-4">
+                <div class="flex items-center gap-10">
+                    <div class="flex items-center gap-2 text-gray-900 icon-container">
+                        <svg class="h-6 w-6 text-[var(--primary-color)]" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M24 4H6V17.3333V30.6667H24V44H42V30.6667V17.3333H24V4Z"/>
+                        </svg>
+                        <h2 class="text-xl font-bold tracking-tight">Marketplace</h2>
+                    </div>
+                    <nav class="hidden md:flex items-center gap-8">
+                        <a href="../homepage/home-page.html" class="text-gray-700 hover:text-gray-900 text-sm font-medium">Home</a>
+                        <a href="#" class="text-gray-700 hover:text-gray-900 text-sm font-medium">Shop</a>
+                        <a href="../SellProduct/sellProduct.html" class="text-gray-700 hover:text-gray-900 text-sm font-medium">Sell</a>
+                    </nav>
+                </div>
+
+                <!-- Right section -->
+                <div class="flex items-center gap-4">
+                    <!-- Search -->
+                    <div class="relative hidden lg:block">
+                        <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="20" height="20" viewBox="0 0 256 256">
+                                <path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"/>
+                            </svg>
+                        </span>
+                        <input type="search" placeholder="Search items..." class="form-input w-full rounded-md border-gray-200 bg-gray-50 py-2 pl-10 pr-4 text-sm text-gray-800 placeholder-gray-500 focus:border-[var(--primary-color)] focus:ring-[var(--primary-color)]" />
+                    </div>
+
+                    <!-- Wishlist -->
+                    <button class="icon-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="20" height="20" viewBox="0 0 256 256">
+                            <path d="M178,32c-20.65,0-38.73,8.88-50,23.89C116.73,40.88,98.65,32,78,32A62.07,62.07,0,0,0,16,94c0,70,103.79,126.66,108.21,129a8,8,0,0,0,7.58,0C136.21,220.66,240,164,240,94A62.07,62.07,0,0,0,178,32Z"/>
+                        </svg>
+                        <span class="sr-only">Wishlist</span>
+                    </button>
+
+                    <!-- Cart -->
+                    <button class="icon-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="20" height="20" viewBox="0 0 256 256">
+                            <path d="M222.14,58.87A8,8,0,0,0,216,56H54.68L49.79,29.14A16,16,0,0,0,34.05,16H16a8,8,0,0,0,0,16h18L59.56,172.29a24,24,0,0,0,5.33,11.27,28,28,0,1,0,44.4,8.44h45.42A27.75,27.75,0,0,0,152,204a28,28,0,1,0,28-28H83.17a8,8,0,0,1-7.87-6.57L72.13,152h116a24,24,0,0,0,23.61-19.71l12.16-66.86A8,8,0,0,0,222.14,58.87Z"/>
+                        </svg>
+                        <span class="sr-only">Cart</span>
+                    </button>
+
+                    <!-- Profile -->
+                    <div class="h-10 w-10 rounded-full bg-cover bg-center bg-no-repeat profile-pic"></div>
+                </div>
+            </header>
+
+            <!-- Main -->
+            <main class="flex-1 px-4 py-8 sm:px-6 lg:px-8">
+                <div class="mx-auto max-w-5xl">
+
+                    <!-- Tabs -->
+                    <h1 class="text-3xl font-bold tracking-tight text-gray-900">My Account</h1>
+                    <div class="mt-6 border-b border-gray-200">
+                        <nav class="-mb-px flex space-x-8" aria-label="Tabs">
+                            <a href="#" class="tab-active">Overview</a>
+                            <a href="#" class="tab-inactive">Orders</a>
+                            <a href="#" class="tab-inactive">Saved Items</a>
+                            <a href="#" class="tab-inactive">Listings</a>
+                        </nav>
+                    </div>
+
+                    <!-- Recent Orders -->
+                    <section class="mt-8">
+                        <h2 class="text-xl font-bold text-gray-900">Recent Orders</h2>
+                        <div class="mt-4 overflow-hidden rounded-md border border-gray-200">
+                            <div class="overflow-x-auto">
+                                <table class="min-w-full divide-y divide-gray-200">
+                                    <thead class="bg-gray-50">
+                                        <tr>
+                                            <th class="table-head">Item</th>
+                                            <th class="table-head"></th>
+                                            <th class="table-head">Status</th>
+                                            <th class="table-head">Date</th>
+                                            <th class="table-head">Total</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-gray-200 bg-white">
+                                        <tr>
+                                            <td class="table-img" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAIiIF4SB-O8ycSV4Gc0YsH9XzgPFRA6yyaANd3x9gqPe86Ca7PrqJDwCwTEhkxPPQeX5jMLUbWBt0hGn7JCci-zEfGjH3zv5pYETuKIwrbTuWdCvpMnvfG3QOzX4PJQ6_eL5wHjkmaIsab4RHhoUQ9cWtNsBZeftjxbXKk_wha-7in_1d2kYd-oGLzZHjoThwSlmoMuqmz_yIcc5z9_dhfxoY0SmI1MIYSd9txlc61kejkedDWonDFRNbyJjOFc6v87Ioz031B9x0");'></td>
+                                            <td class="table-cell">Modern Chair</td>
+                                            <td class="table-cell">Shipped</td>
+                                            <td class="table-cell">May 15, 2024</td>
+                                            <td class="table-cell">$45.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="table-img" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB9LY2V9TWFjmF464SIpqna2S81-ibtBOmpxKnfSzGNDXUAHB0scC1sLcSmpop1O0bLVs6VcAw49tl7FAY9fi1kEYMU9SpJACJIVvd2S_ig1JZ0eBvZAXHDw4paiEn3YgYPYM8tM-emH6d-8q1bkxOmElv8gq83z8XNAiCtW2KKlh1tl-fb9MHyC27aw1ims3zhGyc6N8VN3HD-SDDD3cJbeTIqieQHdeGe1YMcWd8EeHzCyJTOjDx25PaAYYwwbC539rrwcCX3RVs");'></td>
+                                            <td class="table-cell">Leather Tote Bag</td>
+                                            <td class="table-cell">Delivered</td>
+                                            <td class="table-cell">May 10, 2024</td>
+                                            <td class="table-cell">$80.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="table-img" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDnJw2sNwT57oen4OVjG8uRuOzOatkmp1qW-rK1O_6hJeKZhsbjZTBtB0UcG1n-9gf9RUi64ITSfwbQ0rxKc0UgkoCpJnODlHVzm0cdBnR59RY8jEy3dYI0ZOdinjpWl-Xl-vSO71_oJpWzw1Wi1hBH58D7RkUJ0YYaH2Caa02McdQ3TyTUvyG6BayYq1t6Prv2k6B1rw9Iy5qUeDA7fVCsZNywyLkEeWilZ2JzHbBfkVNK6APkvIrmLfZBzNT_4DE5ui-98cDKW1w");'></td>
+                                            <td class="table-cell">Minimalist Watch</td>
+                                            <td class="table-cell">Shipped</td>
+                                            <td class="table-cell">May 5, 2024</td>
+                                            <td class="table-cell">$30.00</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Saved Items -->
+                    <section class="mt-12">
+                        <h2 class="text-xl font-bold text-gray-900">Saved Items</h2>
+                        <div class="saved-grid">
+                            <div class="group relative">
+                                <div class="saved-img" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAa-PK8kmGfL4FrO1OfU6U4i-ymY4yXS7byZJAnG7T4dNC1m4OcjVSs0XxUF-kvZIKpnsinpnAiMnpNNFlMMgd7wD3j0Cczf_Bw_HMD3yaChu29oq7ecWcC3mewC2WHmQRwfKRS_OUs1nrGNziKQ7xM_GETtaSga2QXdS-sPcm9KzhRnsMqEmov41S1TgwZsOKm2on6j54cmAobk3-jdkp-f4ViMCKl1KXfyg59ylF6wNX9AFA3pAsAEZA1dadEm0QYwF_D3Hxv8qA");'></div>
+                                <h3 class="mt-2 text-sm font-medium text-gray-900">Ceramic Vase</h3>
+                                <p class="mt-1 text-sm text-gray-500">$35.00</p>
+                            </div>
+                            <div class="group relative">
+                                <div class="saved-img" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBh2pVsVdW6NeuZk6CgCzGJq65Daj000Dhd5bT5UdkL_D8ssUUGRzcJRMMPNE0WS-tyPXGYWStwX3_hUs7muzLezXfPlSUJdi8YexWyo8ORnlpwA9-LsnnkKWUCXjH87AWLQdSq9uUMa1MArQTRcaNTD6ELq736M3nvAAnL6LsXKP0sWoFu14qfFgF_0JHUdPwxz5Pde6HXTyZR3i-KmGSAZlN6oqHhB8K3obgO20ZFfm7ktK_IynMMjOgqyLJKs8pv4Ca_xp9B2T4");'></div>
+                                <h3 class="mt-2 text-sm font-medium text-gray-900">Vintage Lamp</h3>
+                                <p class="mt-1 text-sm text-gray-500">$75.00</p>
+                            </div>
+                            <div class="group relative">
+                                <div class="saved-img" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAmnO15UkDGrXZvMae21g4nRbxSByY8Do4O4wp8TXrSpE5ztpLD2pmjkV-JSzSIsmMZ_iKswaCKlWuAWzQQaweOsYKzyye0OSr93D57YQzpBkNk_bnbXmjQqbbGRXj0To5J4DYJGxiPn3RY3OL9B8uk4x99vCMeqmsmKJRv0Ni6o7yRF2c_5T00bTT-e-c9NFwxXDnZLoPj6LFtcW0QlOQ_KqLzT0pMYsZGZggb2beiY3Pvu2k1V0BzlrFHvgVYu1jOE0XS8DVs0bk");'></div>
+                                <h3 class="mt-2 text-sm font-medium text-gray-900">Handcrafted Scarf</h3>
+                                <p class="mt-1 text-sm text-gray-500">$50.00</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+
+</html>
