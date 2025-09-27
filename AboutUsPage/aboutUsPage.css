@@ -1,0 +1,342 @@
+/* About Us Page - Complete CSS System */
+
+
+/* CSS Variables */
+
+:root {
+    --primary-color: #1173d4;
+    --background-light: #ffffff;
+    --background-dark: #101922;
+    --text-primary: #1f2937;
+    --text-secondary: #6b7280;
+    --text-muted: #9ca3af;
+    --text-white: #ffffff;
+    --border-color: #e5e7eb;
+    --border-primary: rgba(17, 115, 212, 0.2);
+    --border-primary-dark: rgba(17, 115, 212, 0.3);
+    --card-background: #ffffff;
+    --hover-background: rgba(17, 115, 212, 0.1);
+    --backdrop-blur: rgba(246, 247, 248, 0.8);
+    --backdrop-blur-dark: rgba(16, 25, 34, 0.8);
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+
+/* Reset and Base Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+    background-color: var(--background-light);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+
+/* Layout Components */
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+/* Header Styles */
+
+.about-header {
+    background-color: var(--backdrop-blur);
+    backdrop-filter: blur(8px);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    border-bottom: 1px solid var(--border-primary);
+}
+
+.header-content {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 4rem;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+.logo-icon {
+    height: 2rem;
+    width: 2rem;
+    color: var(--primary-color);
+}
+
+.logo-text {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.nav-menu {
+    display: none;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.nav-link {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+    color: var(--primary-color);
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.search-container {
+    display: none;
+    position: relative;
+}
+
+.search-icon {
+    position: absolute;
+    top: 50%;
+    left: 0.75rem;
+    transform: translateY(-50%);
+    height: 1.25rem;
+    width: 1.25rem;
+    color: var(--text-muted);
+}
+
+.search-input {
+    width: 100%;
+    padding: 0.5rem 1rem 0.5rem 2.5rem;
+    border-radius: 0.5rem;
+    background-color: var(--background-light);
+    border: 1px solid var(--border-primary);
+    color: var(--text-primary);
+    font-size: 0.875rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(17, 115, 212, 0.1);
+}
+
+.search-input::placeholder {
+    color: var(--text-muted);
+}
+
+.header-btn {
+    padding: 0.5rem;
+    border-radius: 50%;
+    color: var(--text-secondary);
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.header-btn:hover {
+    background-color: var(--hover-background);
+    color: var(--primary-color);
+}
+
+.header-btn svg {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.user-avatar {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* Main Content */
+
+.about-main {
+    flex-grow: 1;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 3rem 1rem;
+}
+
+.about-content {
+    max-width: 56rem;
+    margin: 0 auto;
+}
+
+.page-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 2rem;
+}
+
+.content-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    color: var(--text-secondary);
+}
+
+.content-section h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    border-left: 4px solid var(--primary-color);
+    padding-left: 1rem;
+}
+
+.content-section p {
+    line-height: 1.75;
+}
+
+
+/* Team Section */
+
+.team-section h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    text-align: center;
+    border: none;
+    padding: 0;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.team-member {
+    text-align: center;
+}
+
+.member-avatar-container {
+    position: relative;
+    display: inline-block;
+}
+
+.member-avatar {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto 1rem;
+    border: 4px solid var(--border-primary);
+}
+
+.member-name {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+}
+
+.member-role {
+    font-size: 0.875rem;
+    color: var(--primary-color);
+}
+
+
+/* Footer */
+
+.about-footer {
+    background-color: var(--background-light);
+    border-top: 1px solid var(--border-primary);
+    margin-top: auto;
+}
+
+.footer-content {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem;
+    text-align: center;
+}
+
+.footer-text {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+}
+
+
+/* Responsive Design */
+
+@media (min-width: 640px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .header-content {
+        padding: 0 1.5rem;
+    }
+    .about-main {
+        padding: 3rem 1.5rem;
+    }
+    .footer-content {
+        padding: 1.5rem 1.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .nav-menu {
+        display: flex;
+    }
+    .search-container {
+        display: block;
+    }
+    .team-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .header-content {
+        padding: 0 2rem;
+    }
+    .about-main {
+        padding: 3rem 2rem;
+    }
+    .footer-content {
+        padding: 1.5rem 2rem;
+    }
+}
