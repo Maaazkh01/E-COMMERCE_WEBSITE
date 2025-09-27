@@ -155,6 +155,9 @@ body {
 }
 
 .header-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 0.5rem;
     border-radius: 50%;
     color: var(--text-secondary);
@@ -162,6 +165,7 @@ body {
     border: none;
     cursor: pointer;
     transition: background-color 0.2s ease, color 0.2s ease;
+    text-decoration: none;
 }
 
 .header-btn:hover {

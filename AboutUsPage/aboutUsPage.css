@@ -166,6 +166,7 @@ body {
     border: none;
     cursor: pointer;
     transition: background-color 0.2s ease, color 0.2s ease;
+    text-decoration: none;
 }
 
 .header-btn:hover {

@@ -159,6 +159,7 @@ body {
     color: var(--text-secondary);
     border: none;
     cursor: pointer;
+    text-decoration: none;
     transition: background-color 0.2s ease;
 }
 

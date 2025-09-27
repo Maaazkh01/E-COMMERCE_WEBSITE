@@ -193,6 +193,7 @@ body.favourites-page {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-decoration: none;
 }
 
 .header-btn:hover {
