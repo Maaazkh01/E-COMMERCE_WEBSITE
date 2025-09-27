@@ -1,0 +1,77 @@
+/* Fonts */
+
+body {
+    font-family: "Work Sans", "Noto Sans", sans-serif;
+}
+
+
+/* Custom colors (same as your :root variables) */
+
+:root {
+    --primary-color: #1173d4;
+    --secondary-color: #f3f4f6;
+    --text-primary: #111827;
+    --text-secondary: #6b7280;
+}
+
+
+/* Tailwind helpers */
+
+.text-primary {
+    color: var(--primary-color);
+}
+
+.text-text-primary {
+    color: var(--text-primary);
+}
+
+.text-text-secondary {
+    color: var(--text-secondary);
+}
+
+.bg-primary {
+    background-color: var(--primary-color);
+}
+
+
+/* Navigation Links */
+
+.nav-link {
+    color: var(--text-primary);
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+    color: var(--primary-color);
+}
+
+
+/* Buttons (header icons) */
+
+.icon-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 9999px;
+    background-color: #f3f4f6;
+    color: var(--text-secondary);
+    transition: all 0.2s ease;
+}
+
+.icon-btn:hover {
+    background-color: #e5e7eb;
+    color: var(--text-primary);
+}
+
+
+/* Section Titles */
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+}

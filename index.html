@@ -1,195 +1,95 @@
-<!-- HOMEPAGE -->
- 
- <html><head>
-<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
-<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Work+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
-<title>Stitch Design</title>
-<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<meta charset="utf-8"/>
-<style type="text/tailwindcss">
-      :root {
-        --primary-color: #1173d4;
-        --secondary-color: #f3f4f6;
-        --text-primary: #111827;
-        --text-secondary: #6b7280;
-      }
-    </style>
-</head>
-<body class="bg-white" style='font-family: "Work Sans", "Noto Sans", sans-serif;'>
-<div class="relative flex size-full min-h-screen flex-col overflow-x-hidden">
-<div class="flex h-full grow flex-col">
-<header class="flex items-center justify-between whitespace-nowrap border-b border-gray-200 px-10 py-4">
-<div class="flex items-center gap-10">
-<div class="flex items-center gap-3 text-2xl font-bold text-[var(--text-primary)]">
-<svg class="h-8 w-8 text-[var(--primary-color)]" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-<path clip-rule="evenodd" d="M24 4H6V17.3333V30.6667H24V44H42V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-<h1 class="tracking-tight">Marketplace</h1>
-</div>
-<nav class="hidden md:flex items-center gap-8 text-base">
-<a class="text-[var(--text-primary)] font-medium hover:text-[var(--primary-color)] transition-colors" href="#">Home</a>
-<a class="text-[var(--text-primary)] font-medium hover:text-[var(--primary-color)] transition-colors" href="#">Shop</a>
-<a class="text-[var(--text-primary)] font-medium hover:text-[var(--primary-color)] transition-colors" href="#">About</a>
-<a class="text-[var(--text-primary)] font-medium hover:text-[var(--primary-color)] transition-colors" href="#">Contact</a>
-</nav>
-</div>
-<div class="flex flex-1 justify-end items-center gap-4">
-<div class="hidden md:block relative">
-<div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
-<svg class="h-5 w-5 text-[var(--text-secondary)]" fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
-<path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path>
-</svg>
-</div>
-<input class="form-input w-full rounded-md border-gray-300 bg-gray-50 py-2 pl-10 pr-4 text-base placeholder:text-[var(--text-secondary)] focus:border-[var(--primary-color)] focus:ring-[var(--primary-color)]" placeholder="Search" value=""/>
-</div>
-<div class="flex items-center gap-2">
-<button class="flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 text-[var(--text-secondary)] hover:bg-gray-200 hover:text-[var(--text-primary)] transition-colors">
-<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
-<path d="M178,32c-20.65,0-38.73,8.88-50,23.89C116.73,40.88,98.65,32,78,32A62.07,62.07,0,0,0,16,94c0,70,103.79,126.66,108.21,129a8,8,0,0,0,7.58,0C136.21,220.66,240,164,240,94A62.07,62.07,0,0,0,178,32ZM128,206.8C109.74,196.16,32,147.69,32,94A46.06,46.06,0,0,1,78,48c19.45,0,35.78,10.36,42.6,27a8,8,0,0,0,14.8,0c6.82-16.67,23.15-27,42.6-27a46.06,46.06,0,0,1,46,46C224,147.61,146.24,196.15,128,206.8Z"></path>
-</svg>
-</button>
-<button class="flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 text-[var(--text-secondary)] hover:bg-gray-200 hover:text-[var(--text-primary)] transition-colors">
-<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
-<path d="M216,40H40A16,16,0,0,0,24,56V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,160H40V56H216V200ZM176,88a48,48,0,0,1-96,0,8,8,0,0,1,16,0,32,32,0,0,0,64,0,8,8,0,0,1,16,0Z"></path>
-</svg>
-</button>
-</div>
-<div class="h-10 w-10 rounded-full bg-cover bg-center bg-no-repeat" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC8YaEUkUsj8yBMdmp5x9iQhdW7IXTso875CFt0rg6HmDvjM1cbFjMk5nZnQSsyQegZRnJmhKpAmzOH6mt4g68L2LrtWBr64THC-0P_jeW3HawNblHeCqlZQL3MGvShfaxijub_mEOR91mKpkgOCV4cspX3l_W6wurPE_e11olL9F6__t-a_WoGOK5dYbqQ0QlyErCSdw_qZThtq9VyD35wbhftPmcJjKWolo1X_ptBTpRCTHjbf99t7CSauyz58poUT_5X5T4qIIM");'></div>
-</div>
-</header>
-<main class="mx-auto w-full max-w-7xl flex-1 px-4 sm:px-6 lg:px-8 py-10">
-<div class="flex flex-col gap-12">
-<div class="relative md:hidden">
-<div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
-<svg class="h-5 w-5 text-[var(--text-secondary)]" fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
-<path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path>
-</svg>
-</div>
-<input class="form-input w-full rounded-md border-gray-300 bg-gray-50 py-3 pl-10 pr-4 text-base placeholder:text-[var(--text-secondary)] focus:border-[var(--primary-color)] focus:ring-[var(--primary-color)]" placeholder="Search for products" value=""/>
-</div>
-<section>
-<h2 class="text-2xl font-bold tracking-tight text-[var(--text-primary)] mb-6">Featured Categories</h2>
-<div class="grid grid-cols-2 sm:grid-cols-4 gap-6">
-<a class="group" href="#">
-<div class="w-full aspect-square rounded-lg bg-cover bg-center transition-transform duration-300 group-hover:scale-105" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB7jtdWnt4sy9cbaaOPt0K2byVWxls_d37fYaW6oi6ND5aXtxMkZj8zxmO5gaR_zl2E0lJLAK6SsXtJyF55K9d4cPnQmKMU0uxSR-aPZtpZoDnqPpeoT38Z1OrRszHqDJBGBVzzWjiVXQQ9Ka-GkmDHN0gBPqFaGpNnNNi0BQRmTtCs_69hYT5Hl3J2JEiY7DxIwGZR1xNjll4W120bs2B8OSTFWQR21qcY6xrgoflh-4NZn8mcWkfQEELym07QV2ch39b_JAhc1gc");'></div>
-<p class="mt-4 text-center text-lg font-medium text-[var(--text-primary)]">Clothing</p>
-</a>
-<a class="group" href="#">
-<div class="w-full aspect-square rounded-lg bg-cover bg-center transition-transform duration-300 group-hover:scale-105" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAcHm1v6hdtg-uY3CmceJhuKHdFo3ilsduSy7Qtz5hhm9CKp33nOVXRHkBn0tyGq_OpkKukdtj-atGxgo1PFFA4rIB75dxzLNhfYLwRQmHVGDmD2E4eLZ2NF7gYoJs0LWSIKymsT7zjF8bFP0Qpc-zMQHeKTWwcyxHr4eqtSuyufdnWvlXU_FAno8EOMV8CboptW72JHWYP9fVUs3VgqJcTIQQKCujEQ9mBL-CC8wTCHrqBu0HZDxzsa6frOe7vP4hw-6Zxf9ZBo8c");'></div>
-<p class="mt-4 text-center text-lg font-medium text-[var(--text-primary)]">Shoes</p>
-</a>
-<a class="group" href="#">
-<div class="w-full aspect-square rounded-lg bg-cover bg-center transition-transform duration-300 group-hover:scale-105" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAu0GZLExSOO9xhztnPWrlQkkyATVEObcrCbGnH0cYeUO4Ax1nxxhloT3Pd7a8xwSCGEg8HjB5jxvWer6T4zlAF55M09YSiCoZmcxjH-bMydh57yWzw_WyW1Zfrf9GbOWN0pyqf70kxwJIfMA8HChPDQ_tnTvMyZWRSG6o0EWJn-5sW_iRbArD7q7RBizXWH0ZmlNsPvfJ9Ljdt9U5TuQs1j36Lac1HSscoxmCX4PngWXOCVpEHKSteQ1NmyxNxCvEMHlZGShuQxCs");'></div>
-<p class="mt-4 text-center text-lg font-medium text-[var(--text-primary)]">Accessories</p>
-</a>
-<a class="group" href="#">
-<div class="w-full aspect-square rounded-lg bg-cover bg-center transition-transform duration-300 group-hover:scale-105" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCCdgiV_auM-FQuOB7jjdXkBPp9cM2FCUU9xM6IVF9Bs0otfHb3nId24K2t6Dy6oxz6y-UgqzXukZ9so-gwloXWUHtUbgRirWk1v28vGXMnXoQxAGCt7ETs4aG88gmCMG-r5kYDaV_vLTBjzscPrLQKrbgla4_Ws7c3D0r7liCU4eGnqg8Di_VJu0rsx4dM773XJ9twK35MRZua_yNadB-OPfl29NBQoEi92srG61P15_eL4xlyEZWPqyR-TA9TCqJIKuNNTu-n52w");'></div>
-<p class="mt-4 text-center text-lg font-medium text-[var(--text-primary)]">Home Decor</p>
-</a>
-</div>
-</section>
-<section>
-<h2 class="text-2xl font-bold tracking-tight text-[var(--text-primary)] mb-6">New Arrivals</h2>
-<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-10">
-<div class="group relative">
-<div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
-<img alt="Summer Dress" class="h-full w-full object-cover object-center lg:h-full lg:w-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0RYjDF1Ak9yAZvXxzTGvRipTZzxGUTgKnjtl8skHLq0lntgeM5W2fIuWt5BQ3dn_EXeBzBUeXsRmGii0_I8wI1UmCePHS_HWNCmhF5cN4es1wRaL8I-s_vY7DSI6BYycgKJ69UIT7_2F1TqbPSRr-px9_J90CXtO5NH-Gn2PGBGvlBXqw4RtooLWLlQbVybz5PRfHYjneFChPmDae6qm6Y8-p5WuyZ8B62BnPyGexLz-p0CY_oyUftshconaVeAaW7Ev6ADNCOLI"/>
-</div>
-<div class="mt-4 flex justify-between">
-<div>
-<h3 class="text-base text-[var(--text-primary)]"><a href="#"><span aria-hidden="true" class="absolute inset-0"></span>Summer Dress</a></h3>
-</div>
-<p class="text-base font-medium text-[var(--text-primary)]">$49.99</p>
-</div>
-</div>
-<div class="group relative">
-<div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
-<img alt="Leather Sandals" class="h-full w-full object-cover object-center lg:h-full lg:w-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQD520FBpS-bEMwwLgKyZIjYzBlWtzqv9z_gBwDTjMn4L1KOJ1sXI0seUoTY5aUziHGNW22armjbgS8eOdkn-c3QxTu7yd1mBrC7PwEX3xEH5LQjaOasGhxRdJQ2P5Mafv6pIFGE9LwerxoOd9k1BXa0zHytaUbd5qozPAbEyqSXJMXutiMZ9gIF1PTRlYlNyR8UkzUOes_-34qM8-ufYx-RNWjROpFxDXyx1beDDbiARXdH4MnicorZ0wu7308IajpnWBL_p9TEU"/>
-</div>
-<div class="mt-4 flex justify-between">
-<div>
-<h3 class="text-base text-[var(--text-primary)]"><a href="#"><span aria-hidden="true" class="absolute inset-0"></span>Leather Sandals</a></h3>
-</div>
-<p class="text-base font-medium text-[var(--text-primary)]">$39.99</p>
-</div>
-</div>
-<div class="group relative">
-<div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
-<img alt="Straw Hat" class="h-full w-full object-cover object-center lg:h-full lg:w-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnDnX8x6xVrc1HTCavAyn0FEpIHC-80-XLZ0o-U1yzagizUD51SsJ3icmD9nZQ3NyBDNPJNmPZCVDsJW7XW4p5kwo_-8Q_EU2ChrC_Bf2e3zYDxckA4gxn5m0QBCOSLLP7Ug9l6WBbjdYXQrtOBmsHKNXKOlbMlVyOHuGC_S7kxPqRTp46cah7_-KQldFs6PJxujDs8shptOS_1PKGRJj8YFhJ6kr7CQ8Wegekv3jZTL9wM6Q_nZOTT5UpQRM_7pdH2NLaAKfDLYQ"/>
-</div>
-<div class="mt-4 flex justify-between">
-<div>
-<h3 class="text-base text-[var(--text-primary)]"><a href="#"><span aria-hidden="true" class="absolute inset-0"></span>Straw Hat</a></h3>
-</div>
-<p class="text-base font-medium text-[var(--text-primary)]">$29.99</p>
-</div>
-</div>
-<div class="group relative">
-<div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
-<img alt="Beach Bag" class="h-full w-full object-cover object-center lg:h-full lg:w-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7GAE_KIfSLiRgsGCTKgfBOOb_iiEKaKDoejR4XKqkasce3LStegEwlQK42XcDhl3XyNzZBETwPM9Dd1cho9v9ICC5E8eUS_7C5RRVjONpDQcJmDa6tf4Rsgt-uPTF2W7awi-gkh6vbSvQpwuDKAXvXosGkPZyIAsIJMjb_thPoDWyFwbCjbtkpue_fICzAvgkYsj5H2WxhpD4LdOHVBh6jVq0VwLd8c8VhNm-pu1W3Obrli6S9OcgiqNm2RsZvPq7B2nus0q-MDw"/>
-</div>
-<div class="mt-4 flex justify-between">
-<div>
-<h3 class="text-base text-[var(--text-primary)]"><a href="#"><span aria-hidden="true" class="absolute inset-0"></span>Beach Bag</a></h3>
-</div>
-<p class="text-base font-medium text-[var(--text-primary)]">$19.99</p>
-</div>
-</div>
-</div>
-</section>
-<section>
-<h2 class="text-2xl font-bold tracking-tight text-[var(--text-primary)] mb-6">Best Sellers</h2>
-<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-10">
-<div class="group relative">
-<div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
-<img alt="Classic White Tee" class="h-full w-full object-cover object-center lg:h-full lg:w-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCBhhGjeWaBZ-I7jvUVqRKaqoE7HzyBbUdEmNfRtMWOrCP3mA9ohx0H8YUC5EuKG2R6GOegi6elZlaQRZH1yl8mysZb2Ceso6386lVAa5mpmARvM7s-6dnp3yjFSkUgEa5bDGACZ9N1R81zdAfbnrO5j6kIR8kBhb0FC5X7cZ_7FWHnjRjmm2axHToNt3xrEFZYyr9g19yhhlyBPtN5YuFkrR_tECZ6O78A-Mer_eL0aRTUQf56g2p5UUdz8pOvdudt9qQxu2PYbA"/>
-</div>
-<div class="mt-4 flex justify-between">
-<div>
-<h3 class="text-base text-[var(--text-primary)]"><a href="#"><span aria-hidden="true" class="absolute inset-0"></span>Classic White Tee</a></h3>
-</div>
-<p class="text-base font-medium text-[var(--text-primary)]">$24.99</p>
-</div>
-</div>
-<div class="group relative">
-<div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
-<img alt="Denim Jeans" class="h-full w-full object-cover object-center lg:h-full lg:w-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_YeT1sLlN5zu1WtPwdHMZI9QmjCXJbwLYOz5Zt3UgUezoPu8qX7QDIdX9EyHGC1jtST18pi5O6qJic9g-tRzXDhDJda92We5lHwN6_0VHkuHTOxysZhDkGqhFX9LG0iJh7RwOi6-ET7QcAZfdsTiErekypPD2CXwZMkH3zVXoEcPVDO55dydZiiPTKLICeqg7C0YhVIRrugAacnZVYRtro9_TB640QRx4Xg7o3WcCsB5iApINKDBB6y0xAGXD-9lDQN6cXOCKw8I"/>
-</div>
-<div class="mt-4 flex justify-between">
-<div>
-<h3 class="text-base text-[var(--text-primary)]"><a href="#"><span aria-hidden="true" class="absolute inset-0"></span>Denim Jeans</a></h3>
-</div>
-<p class="text-base font-medium text-[var(--text-primary)]">$59.99</p>
-</div>
-</div>
-<div class="group relative">
-<div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
-<img alt="Sneakers" class="h-full w-full object-cover object-center lg:h-full lg:w-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkKU6eUmR9gBEvRlrZXTGhcVjNqpNN-vxIc8fAHovc9bA88CkqeuQWMds9IdxpTmyqsoOHINIuEIJ_pXiPonAA7YdDSe-jOjHhKnCofWkZeOqj7EaD0hS6PtMbpJSg7ktl7M-7E6WXyovbccPxJXvE6didyZ0Od89c3yoCmpGiJUEV2Bs9BP2s0qQHHvDSCQCWU55R3Vk01slZo0lKuLi0u1FWsTtl9dpgC0_8wf9Qw2DxpWZH54705gHW8WdOoZ6q7Bci7CDxnZw"/>
-</div>
-<div class="mt-4 flex justify-between">
-<div>
-<h3 class="text-base text-[var(--text-primary)]"><a href="#"><span aria-hidden="true" class="absolute inset-0"></span>Sneakers</a></h3>
-</div>
-<p class="text-base font-medium text-[var(--text-primary)]">$79.99</p>
-</div>
-</div>
-<div class="group relative">
-<div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
-<img alt="Sunglasses" class="h-full w-full object-cover object-center lg:h-full lg:w-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6eopQJqGX7IZ5el1YoB6JQA-ag8lMjuFPfAEom9E6CpsNW4FlxQnuU8RWERHS72g1MQY37lvimzgo7TUh7lDNoJVcjgY3wUkAGqMwXmf3pSLdsSGj8l8qX42obREo2gQZvDRKzHDsImJR8eSZ_aJZhnsb7FkwCJ4rENlSbtNNlhkk024z59wS9zL33AJxghBg3-n4OrTT0gYVusVmvn4Hwn43cSxyl40Yb7PQuLIH4ol7GvSq1AR8RxFP-jTB2hTkIItN0jeR4BY"/>
-</div>
-<div class="mt-4 flex justify-between">
-<div>
-<h3 class="text-base text-[var(--text-primary)]"><a href="#"><span aria-hidden="true" class="absolute inset-0"></span>Sunglasses</a></h3>
-</div>
-<p class="text-base font-medium text-[var(--text-primary)]">$14.99</p>
-</div>
-</div>
-</div>
-</section>
-</div>
-</main>
-</div>
-</div>
+<!DOCTYPE html>
+<html>
 
-</body></html>
+<head>
+    <meta charset="utf-8" />
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+    <link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Work+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="preload" />
+    <title>Dropshipping website</title>
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="page-container">
+        <header class="header">
+            <div class="logo-container">
+                <div class="logo-icon">
+                    <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                            <path clip-rule="evenodd" d="M24 4H6V17.3333V30.6667H24V44H42V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
+                        </svg>
+                </div>
+                <h2 class="logo-text">Marketplace</h2>
+            </div>
+            <div class="nav-container">
+                <nav>
+                    <a class="nav-link" href="homepage/home-page.html">Home</a>
+                    <a class="nav-link" href="#">Shop</a>
+                    <a class="nav-link" href="#">Sell</a>
+                </nav>
+                <a class="btn-login" href="#">Login</a>
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="form-box">
+                <div class="form-header">
+                    <h1 class="form-title">Create an Account</h1>
+                    <p class="form-subtitle">Join our marketplace to start buying and selling.</p>
+                </div>
+
+                <button class="btn-google">
+                        <svg class="google-icon" fill="none" viewBox="0 0 24 24">
+                            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"></path>
+                            <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"></path>
+                            <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"></path>
+                            <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"></path>
+                        </svg>
+                        Sign up with Google
+                    </button>
+
+                <div class="divider"><span>Or continue with</span></div>
+
+                <label for="email" class="form-label">Email</label>
+                <input id="email" type="email" class="form-input" placeholder="you@example.com">
+
+                <label for="password" class="form-label">Password</label>
+                <div class="password-wrapper">
+                    <input id="password" type="password" class="form-input" placeholder="••••••••">
+                    <img id="togglePassword" src="images/icons/show_password_ic.png" alt="Show Password" class="toggle-password-icon">
+                </div>
+
+
+                <button class="btn-submit">Create Account</button>
+
+                <p class="terms">
+                    By creating an account, you agree to our
+                    <a class="link" href="#">Terms of Service</a> and
+                    <a class="link" href="#">Privacy Policy</a>.
+                </p>
+            </div>
+        </main>
+    </div>
+    <script>
+        const passwordInput = document.getElementById("password");
+        const togglePassword = document.getElementById("togglePassword");
+
+        togglePassword.addEventListener("click", () => {
+            const isPassword = passwordInput.type === "password";
+            passwordInput.type = isPassword ? "text" : "password";
+
+
+            // Swap imageing
+
+            togglePassword.src = isPassword ? "images/icons/hide_password_ic.png" : "images/icons/show_password_ic.png";
+            togglePassword.alt = isPassword ? "Hide Password" : "Show Password";
+        });
+    </script>
+</body>
+
+</html>
