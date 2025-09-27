@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Shopping Cart</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link href="addToCartPage.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="cart-container">
+        <header class="cart-header">
+            <div class="header-content">
+                <div class="header-nav">
+                    <div class="header-left">
+                        <a class="logo" href="#">
+                            <span class="material-symbols-outlined logo-icon">
+                shopping_bag
+              </span>
+                            <span class="logo-text">E-commerce</span>
+                        </a>
+                        <nav class="nav-menu">
+                            <!-- <a class="nav-link" href="#">Featured</a>
+                            <a class="nav-link" href="#">Collectibles</a>
+                            <a class="nav-link" href="#">Digital Art</a> -->
+                        </nav>
+                    </div>
+                    <div class="header-right">
+                        <div class="user-avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDYQMTy_iQn5zCsSvZ96NSkKj4WkakPNqaVz81euWF0JhFmIF5uQLWoWlWDxTJQxN4S6N6UXi2h-OPDtG53uMdi7XYG2ShsTrxhEC00qCgxwlDRzq-p9H4t0qofRSRdZPnI7Q3_uGD8qnhiow9sqnjsYQ2oT8bqV0TIfOA1mI90BUQlJUJpEfmQAiY0jfaSMPenY3CmffwdHPWjPNaOM7p6kYznV0B8B5dDS44ii_6AHVRmtpNaJrpi_RxqZKMZ2ZsATwS_sz5rv2k");'></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="cart-main">
+            <div class="cart-card">
+                <div class="cart-content">
+                    <h1 class="cart-title">Your Cart</h1>
+                    <div class="cart-items">
+                        <div class="cart-item">
+                            <div class="item-info">
+                                <div class="item-image" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDsSx-_zSmxt6qNyzz3znJq0Ct-V0MNKon32lQC8HUWQ2MiZfn9R_409nso4CHdfcxIV5fwFp-pCf9k_V2Hn-zKlb001KH3uwKplANIN0XpzvyCGGrC2iOKzBDcJ0NbrOzfQftcjFlftUl2nO0KZ1dlTk8Nf6tLXmGo4aAlq-7v22sd7Z3BFbsZ5nY-3FnPfqW9hoX3wR2SFeri1MfAdhbl2ZjbS9TM-CTeS-xFsZLXENlK03-4vLtm0cdMHdbpi4Xcou81HzduO5E");'></div>
+                                <div class="item-details">
+                                    <h3>Cotton T-shirt</h3>
+                                    <p>Size: M</p>
+                                </div>
+                            </div>
+                            <div class="item-quantity">
+                                <button class="quantity-btn">
+<span class="material-symbols-outlined">remove</span>
+</button>
+                                <span class="quantity-value">1</span>
+                                <button class="quantity-btn">
+<span class="material-symbols-outlined">add</span>
+</button>
+                            </div>
+                            <div class="item-price">
+                                <p>$45.00</p>
+                                <button class="remove-btn">Remove</button>
+                            </div>
+                        </div>
+                        <div class="cart-item">
+                            <div class="item-info">
+                                <div class="item-image" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDbepUHupwLfG8ZuAmlfftNPACr7cIG1iAdkrJhpgWX4chEifIH_5uxPSL5UvAPP6N7jwIkd5p_kt5rrlehHOd0PPxqNagZun12B_JpzEiktd_cIkuvywTAZgxiIQzMH_Mr9ihxo6YShv1TA5BLdpM6bc0xPUA9fvq9SbR2mgyonJiSHWyIB4uMkyKyZbArMVsvJdkoM3TaVwnSIBEVjZckp-Cx5zLsSjxr5QN9xuoQmPwlRRmo7YaTyRc-6xGI6rEb6LmxWOdC1dg");'></div>
+                                <div class="item-details">
+                                    <h3>Running Shoes</h3>
+                                    <p>Size: 8</p>
+                                </div>
+                            </div>
+                            <div class="item-quantity">
+                                <button class="quantity-btn">
+<span class="material-symbols-outlined">remove</span>
+</button>
+                                <span class="quantity-value">1</span>
+                                <button class="quantity-btn">
+<span class="material-symbols-outlined">add</span>
+</button>
+                            </div>
+                            <div class="item-price">
+                                <p>$90.00</p>
+                                <button class="remove-btn">Remove</button>
+                            </div>
+                        </div>
+                        <div class="cart-item">
+                            <div class="item-info">
+                                <div class="item-image" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD3QGOCaZj6yzLt0fEgUfl6f7WtBW1UMRC5gk6TKiQohBcl4tWl95drwTjOmdPYwnCf7Fo5lPOzu3P46BMuHOllmDrrkq5Q9XW6Ij_0dlxrOBfBNomnBr-TqH4tuPbnBsGI8ZgdggymhfBKHS_pE5mxlVMRrhUe4aN3OCVWrvs61Sc9lzCQ9Zz1uPPtq2t1VrwiEYWuLJi_YreEjf8Kvq3XwSCcoIZFMGH8ywhZoklEyRhMRmyX7UYKS0BxsD9sPLuqJxlyRPusMlQ");'></div>
+                                <div class="item-details">
+                                    <h3>Denim Jeans</h3>
+                                    <p>Size: 30</p>
+                                </div>
+                            </div>
+                            <div class="item-quantity">
+                                <button class="quantity-btn">
+<span class="material-symbols-outlined">remove</span>
+</button>
+                                <span class="quantity-value">1</span>
+                                <button class="quantity-btn">
+<span class="material-symbols-outlined">add</span>
+</button>
+                            </div>
+                            <div class="item-price">
+                                <p>$75.00</p>
+                                <button class="remove-btn">Remove</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-summary">
+                        <div class="summary-items">
+                            <div class="summary-row">
+                                <p>Subtotal</p>
+                                <p>$210.00</p>
+                            </div>
+                            <div class="summary-row">
+                                <p>Shipping</p>
+                                <p>$10.00</p>
+                            </div>
+                        </div>
+                        <div class="summary-total">
+                            <p>Total</p>
+                            <p>$220.00</p>
+                        </div>
+                    </div>
+                    <div class="checkout-section">
+                        <a class="checkout-btn" href="#">
+              Checkout
+            </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+
+</html>
