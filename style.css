@@ -35,6 +35,10 @@ body {
     color: var(--text-primary);
 }
 
+.logo-container:hover {
+    cursor: pointer;
+}
+
 .logo-icon {
     width: 24px;
     height: 24px;
