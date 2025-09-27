@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Dropshipping website</title>
+
+    <!-- Preconnect for Google Fonts -->
+    <link crossorigin href="https://fonts.gstatic.com/" rel="preconnect" />
+
+    <!-- Google Fonts -->
+    <link as="style" href="https://fonts.googleapis.com/css2?display=swap&family=Noto+Sans:wght@400;500;700;900&family=Work+Sans:wght@400;500;700;900" onload="this.rel='stylesheet'" rel="stylesheet" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="home-page-style.css" />
+
+    <!-- Favicon -->
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+</head>
+
+<body class="bg-white font-work-sans">
+    <div class="relative flex size-full min-h-screen flex-col overflow-x-hidden">
+        <div class="flex h-full grow flex-col">
+
+            <!-- Header -->
+            <header class="flex items-center justify-between whitespace-nowrap border-b border-gray-200 px-10 py-4">
+                <div class="flex items-center gap-10">
+                    <div class="flex items-center gap-3 text-2xl font-bold text-text-primary icon-container">
+                        <svg class="h-8 w-8 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                            <path clip-rule="evenodd"
+                                d="M24 4H6V17.3333V30.6667H24V44H42V30.6667V17.3333H24V4Z"
+                                fill="currentColor" fill-rule="evenodd"></path>
+                        </svg>
+                        <h1 class="tracking-tight">Marketplace</h1>
+                    </div>
+
+                    <nav class="hidden md:flex items-center gap-8 text-base">
+                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link" href="#">Shop</a>
+                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="#">Contact</a>
+                    </nav>
+                </div>
+
+                <!-- Right Header Icons -->
+                <div class="flex flex-1 justify-end items-center gap-4">
+
+                    <!-- Search (Desktop) -->
+                    <div class="hidden md:block relative">
+                        <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+                            <svg class="h-5 w-5 text-text-secondary" fill="currentColor" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z">
+                                </path>
+                            </svg>
+                        </div>
+                        <input class="form-input w-full rounded-md border-gray-300 bg-gray-50 py-2 pl-10 pr-4 text-base placeholder-text-secondary focus:border-primary focus:ring-primary" placeholder="Search" />
+                    </div>
+
+                    <!-- Icons -->
+                    <div class="flex items-center gap-2">
+                        <button class="icon-btn">
+                          <img src="../images/icons/favorates_ic.png" alt="fav" style="width: 20px; height: 20px;">
+                        </button>
+                        <button class="icon-btn">
+                            <img src="../images/icons/your_cart_ic.png" alt="cart" style="width: 20px; height: 20px;">
+                        </button>
+                    </div>
+
+                    <!-- Profile Avatar -->
+                    <a href="../UserAccount/user-account.html">
+                        <div class="h-10 w-10 rounded-full bg-cover bg-center bg-no-repeat" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC8YaEUkUsj8yBMdmp5x9iQhdW7IXTso875CFt0rg6HmDvjM1cbFjMk5nZnQSsyQegZRnJmhKpAmzOH6mt4g68L2LrtWBr64THC-0P_jeW3HawNblHeCqlZQL3MGvShfaxijub_mEOR91mKpkgOCV4cspX3l_W6wurPE_e11olL9F6__t-a_WoGOK5dYbqQ0QlyErCSdw_qZThtq9VyD35wbhftPmcJjKWolo1X_ptBTpRCTHjbf99t7CSauyz58poUT_5X5T4qIIM");'>
+                        </div>
+                    </a>
+                </div>
+            </header>
+
+            <!-- Main Content -->
+            <main class="mx-auto w-full max-w-7xl flex-1 px-4 sm:px-6 lg:px-8 py-10">
+                <div class="flex flex-col gap-12">
+
+                    <!-- Search (Mobile) -->
+                    <div class="relative md:hidden">
+                        <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+                            <svg class="h-5 w-5 text-text-secondary" fill="currentColor" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z">
+                                </path>
+                            </svg>
+                        </div>
+                        <input class="form-input w-full rounded-md border-gray-300 bg-gray-50 py-3 pl-10 pr-4 text-base placeholder-text-secondary focus:border-primary focus:ring-primary" placeholder="Search for products" />
+                    </div>
+
+                    <!-- Featured Categories -->
+                    <section>
+                        <h2 class="section-title">Featured Categories</h2>
+
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-6">
+                            <a class="group" href="#">
+                                <div class="w-full aspect-square rounded-lg bg-gray-200 bg-center bg-cover transition-transform duration-300 group-hover:scale-105" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB7jtdWnt4sy9cbaaOPt0K2byVWxls_d37fYaW6oi6ND5aXtxMkZj8zxmO5gaR_zl2E0lJLAK6SsXtJyF55K9d4cPnQmKMU0uxSR-aPZtpZoDnqPpeoT38Z1OrRszHqDJBGBVzzWjiVXQQ9Ka-GkmDHN0gBPqFaGpNnNNi0BQRmTtCs_69hYT5Hl3J2JEiY7DxIwGZR1xNjll4W120bs2B8OSTFWQR21qcY6xrgoflh-4NZn8mcWkfQEELym07QV2ch39b_JAhc1gc");'>
+                                </div>
+                                <p class="mt-4 text-center text-lg font-medium text-text-primary">Clothing</p>
+                            </a>
+
+                            <a class="group" href="#">
+                                <div class="w-full aspect-square rounded-lg bg-gray-200 bg-center bg-cover transition-transform duration-300 group-hover:scale-105" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAcHm1v6hdtg-uY3CmceJhuKHdFo3ilsduSy7Qtz5hhm9CKp33nOVXRHkBn0tyGq_OpkKukdtj-atGxgo1PFFA4rIB75dxzLNhfYLwRQmHVGDmD2E4eLZ2NF7gYoJs0LWSIKymsT7zjF8bFP0Qpc-zMQHeKTWwcyxHr4eqtSuyufdnWvlXU_FAno8EOMV8CboptW72JHWYP9fVUs3VgqJcTIQQKCujEQ9mBL-CC8wTCHrqBu0HZDxzsa6frOe7vP4hw-6Zxf9ZBo8c");'>
+                                </div>
+                                <p class="mt-4 text-center text-lg font-medium text-text-primary">Shoes</p>
+                            </a>
+
+                            <a class="group" href="#">
+                                <div class="w-full aspect-square rounded-lg bg-gray-200 bg-center bg-cover transition-transform duration-300 group-hover:scale-105" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAu0GZLExSOO9xhztnPWrlQkkyATVEObcrCbGnH0cYeUO4Ax1nxxhloT3Pd7a8xwSCGEg8HjB5jxvWer6T4zlAF55M09YSiCoZmcxjH-bMydh57yWzw_WyW1Zfrf9GbOWN0pyqf70kxwJIfMA8HChPDQ_tnTvMyZWRSG6o0EWJn-5sW_iRbArD7q7RBizXWH0ZmlNsPvfJ9Ljdt9U5TuQs1j36Lac1HSscoxmCX4PngWXOCVpEHKSteQ1NmyxNxCvEMHlZGShuQxCs");'>
+                                </div>
+                                <p class="mt-4 text-center text-lg font-medium text-text-primary">Accessories</p>
+                            </a>
+
+                            <a class="group" href="#">
+                                <div class="w-full aspect-square rounded-lg bg-gray-200 bg-center bg-cover transition-transform duration-300 group-hover:scale-105" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCCdgiV_auM-FQuOB7jjdXkBPp9cM2FCUU9xM6IVF9Bs0otfHb3nId24K2t6Dy6oxz6y-UgqzXukZ9so-gwloXWUHtUbgRirWk1v28vGXMnXoQxAGCt7ETs4aG88gmCMG-r5kYDaV_vLTBjzscPrLQKrbgla4_Ws7c3D0r7liCU4eGnqg8Di_VJu0rsx4dM773XJ9twK35MRZua_yNadB-OPfl29NBQoEi92srG61P15_eL4xlyEZWPqyR-TA9TCqJIKuNNTu-n52w");'>
+                                </div>
+                                <p class="mt-4 text-center text-lg font-medium text-text-primary">Home Decor</p>
+                            </a>
+                        </div>
+                    </section>
+
+                    <!-- New Arrivals -->
+                    <section>
+                        <h2 class="section-title mt-10">New Arrivals</h2>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-10">
+                            <!-- product 1 -->
+                            <a href="../ProductPage/productPage.html" class="group relative block">
+                                <div class="w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 h-80">
+                                    <img alt="Summer Dress" class="h-full w-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0RYjDF1Ak9yAZvXxzTGvRipTZzxGUTgKnjtl8skHLq0lntgeM5W2fIuWt5BQ3dn_EXeBzBUeXsRmGii0_I8wI1UmCePHS_HWNCmhF5cN4es1wRaL8I-s_vY7DSI6BYycgKJ69UIT7_2F1TqbPSRr-px9_J90CXtO5NH-Gn2PGBGvlBXqw4RtooLWLlQbVybz5PRfHYjneFChPmDae6qm6Y8-p5WuyZ8B62BnPyGexLz-p0CY_oyUftshconaVeAaW7Ev6ADNCOLI"
+                                    />
+                                </div>
+                                <div class="mt-4 flex justify-between">
+                                    <div>
+                                        <h3 class="text-base text-text-primary">Summer Dress</h3>
+                                    </div>
+                                    <p class="text-base font-medium text-text-primary">$49.99</p>
+                                </div>
+                            </a>
+
+                            <!-- product 2 -->
+                            <a href="../ProductPage/productPage.html" class="group relative block">
+                                <div class="w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 h-80">
+                                    <img alt="Leather Sandals" class="h-full w-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQD520FBpS-bEMwwLgKyZIjYzBlWtzqv9z_gBwDTjMn4L1KOJ1sXI0seUoTY5aUziHGNW22armjbgS8eOdkn-c3QxTu7yd1mBrC7PwEX3xEH5LQjaOasGhxRdJQ2P5Mafv6pIFGE9LwerxoOd9k1BXa0zHytaUbd5qozPAbEyqSXJMXutiMZ9gIF1PTRlYlNyR8UkzUOes_-34qM8-ufYx-RNWjROpFxDXyx1beDDbiARXdH4MnicorZ0wu7308IajpnWBL_p9TEU"
+                                    />
+                                </div>
+                                <div class="mt-4 flex justify-between">
+                                    <div>
+                                        <h3 class="text-base text-text-primary">Leather Sandals</h3>
+                                    </div>
+                                    <p class="text-base font-medium text-text-primary">$39.99</p>
+                                </div>
+                            </a>
+
+                            <!-- product 3 -->
+                            <a href="../ProductPage/productPage.html" class="group relative block">
+                                <div class="w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 h-80">
+                                    <img alt="Straw Hat" class="h-full w-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnDnX8x6xVrc1HTCavAyn0FEpIHC-80-XLZ0o-U1yzagizUD51SsJ3icmD9nZQ3NyBDNPJNmPZCVDsJW7XW4p5kwo_-8Q_EU2ChrC_Bf2e3zYDxckA4gxn5m0QBCOSLLP7Ug9l6WBbjdYXQrtOBmsHKNXKOlbMlVyOHuGC_S7kxPqRTp46cah7_-KQldFs6PJxujDs8shptOS_1PKGRJj8YFhJ6kr7CQ8Wegekv3jZTL9wM6Q_nZOTT5UpQRM_7pdH2NLaAKfDLYQ"
+                                    />
+                                </div>
+                                <div class="mt-4 flex justify-between">
+                                    <div>
+                                        <h3 class="text-base text-text-primary">Straw Hat</h3>
+                                    </div>
+                                    <p class="text-base font-medium text-text-primary">$29.99</p>
+                                </div>
+                            </a>
+
+                            <!-- product 4 -->
+                            <a href="../ProductPage/productPage.html" class="group relative block">
+                                <div class="w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 h-80">
+                                    <img alt="Beach Bag" class="h-full w-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7GAE_KIfSLiRgsGCTKgfBOOb_iiEKaKDoejR4XKqkasce3LStegEwlQK42XcDhl3XyNzZBETwPM9Dd1cho9v9ICC5E8eUS_7C5RRVjONpDQcJmDa6tf4Rsgt-uPTF2W7awi-gkh6vbSvQpwuDKAXvXosGkPZyIAsIJMjb_thPoDWyFwbCjbtkpue_fICzAvgkYsj5H2WxhpD4LdOHVBh6jVq0VwLd8c8VhNm-pu1W3Obrli6S9OcgiqNm2RsZvPq7B2nus0q-MDw"
+                                    />
+                                </div>
+                                <div class="mt-4 flex justify-between">
+                                    <div>
+                                        <h3 class="text-base text-text-primary">Beach Bag</h3>
+                                    </div>
+                                    <p class="text-base font-medium text-text-primary">$19.99</p>
+                                </div>
+                            </a>
+                        </div>
+                    </section>
+
+                    <!-- Best Sellers -->
+                    <section>
+                        <h2 class="section-title mt-10">Best Sellers</h2>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-10">
+                            <!-- seller 1 -->
+                            <a href="../ProductPage/productPage.html" class="group relative block">
+                                <div class="w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 h-80">
+                                    <img alt="Classic White Tee" class="h-full w-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCBhhGjeWaBZ-I7jvUVqRKaqoE7HzyBbUdEmNfRtMWOrCP3mA9ohx0H8YUC5EuKG2R6GOegi6elZlaQRZH1yl8mysZb2Ceso6386lVAa5mpmARvM7s-6dnp3yjFSkUgEa5bDGACZ9N1R81zdAfbnrO5j6kIR8kBhb0FC5X7cZ_7FWHnjRjmm2axHToNt3xrEFZYyr9g19yhhlyBPtN5YuFkrR_tECZ6O78A-Mer_eL0aRTUQf56g2p5UUdz8pOvdudt9qQxu2PYbA"
+                                    />
+                                </div>
+                                <div class="mt-4 flex justify-between">
+                                    <div>
+                                        <h3 class="text-base text-text-primary">Classic White Tee</h3>
+                                    </div>
+                                    <p class="text-base font-medium text-text-primary">$24.99</p>
+                                </div>
+                            </a>
+
+                            <!-- seller 2 -->
+                            <a href="../ProductPage/productPage.html" class="group relative block">
+                                <div class="w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 h-80">
+                                    <img alt="Denim Jeans" class="h-full w-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_YeT1sLlN5zu1WtPwdHMZI9QmjCXJbwLYOz5Zt3UgUezoPu8qX7QDIdX9EyHGC1jtST18pi5O6qJic9g-tRzXDhDJda92We5lHwN6_0VHkuHTOxysZhDkGqhFX9LG0iJh7RwOi6-ET7QcAZfdsTiErekypPD2CXwZMkH3zVXoEcPVDO55dydZiiPTKLICeqg7C0YhVIRrugAacnZVYRtro9_TB640QRx4Xg7o3WcCsB5iApINKDBB6y0xAGXD-9lDQN6cXOCKw8I"
+                                    />
+                                </div>
+                                <div class="mt-4 flex justify-between">
+                                    <div>
+                                        <h3 class="text-base text-text-primary">Denim Jeans</h3>
+                                    </div>
+                                    <p class="text-base font-medium text-text-primary">$59.99</p>
+                                </div>
+                            </a>
+
+                            <!-- seller 3 -->
+                            <a href="../ProductPage/productPage.html" class="group relative block">
+                                <div class="w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 h-80">
+                                    <img alt="Sneakers" class="h-full w-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkKU6eUmR9gBEvRlrZXTGhcVjNqpNN-vxIc8fAHovc9bA88CkqeuQWMds9IdxpTmyqsoOHINIuEIJ_pXiPonAA7YdDSe-jOjHhKnCofWkZeOqj7EaD0hS6PtMbpJSg7ktl7M-7E6WXyovbccPxJXvE6didyZ0Od89c3yoCmpGiJUEV2Bs9BP2s0qQHHvDSCQCWU55R3Vk01slZo0lKuLi0u1FWsTtl9dpgC0_8wf9Qw2DxpWZH54705gHW8WdOoZ6q7Bci7CDxnZw"
+                                    />
+                                </div>
+                                <div class="mt-4 flex justify-between">
+                                    <div>
+                                        <h3 class="text-base text-text-primary">Sneakers</h3>
+                                    </div>
+                                    <p class="text-base font-medium text-text-primary">$79.99</p>
+                                </div>
+                            </a>
+
+                            <!-- seller 4 -->
+                            <a href="../ProductPage/productPage.html" class="group relative block">
+                                <div class="w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 h-80">
+                                    <img alt="Sunglasses" class="h-full w-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6eopQJqGX7IZ5el1YoB6JQA-ag8lMjuFPfAEom9E6CpsNW4FlxQnuU8RWERHS72g1MQY37lvimzgo7TUh7lDNoJVcjgY3wUkAGqMwXmf3pSLdsSGj8l8qX42obREo2gQZvDRKzHDsImJR8eSZ_aJZhnsb7FkwCJ4rENlSbtNNlhkk024z59wS9zL33AJxghBg3-n4OrTT0gYVusVmvn4Hwn43cSxyl40Yb7PQuLIH4ol7GvSq1AR8RxFP-jTB2hTkIItN0jeR4BY"
+                                    />
+                                </div>
+                                <div class="mt-4 flex justify-between">
+                                    <div>
+                                        <h3 class="text-base text-text-primary">Sunglasses</h3>
+                                    </div>
+                                    <p class="text-base font-medium text-text-primary">$14.99</p>
+                                </div>
+                            </a>
+                        </div>
+                    </section>
+
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+
+</html>
