@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+    <link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Work+Sans:wght@400;500;700;900&amp;family=Noto+Sans:wght@400;500;700;900" onload="this.rel='stylesheet'" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <title>Shop Page</title>
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+    <link rel="stylesheet" href="shopPage.css">
+
+</head>
+
+<body class="shop-container">
+    <div class="layout-container">
+        <header class="shop-header">
+            <div class="header-left">
+                <div class="logo">
+                    <svg class="logo-icon" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                        <path clip-rule="evenodd" d="M24 4H6V17.3333V30.6667H24V44H42V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
+                    </svg>
+                    <h2 class="logo-text">Marketplace</h2>
+                </div>
+                <div class="nav-menu">
+                    <a class="nav-link" href="#">Featured</a>
+                    <a class="nav-link" href="#">Categories</a>
+                    <a class="nav-link" href="#">Deals</a>
+                    <a class="nav-link" href="#">Sell</a>
+                </div>
+            </div>
+            <div class="header-right">
+                <label class="header-search">
+                    <span class="material-symbols-outlined header-search-icon">search</span>
+                    <input class="header-search-input" placeholder="Search" value=""/>
+                </label>
+                <button class="header-btn">
+                    <span class="material-symbols-outlined">favorite</span>
+                </button>
+                <button class="header-btn">
+                    <span class="material-symbols-outlined">shopping_cart</span>
+                </button>
+                <div class="user-avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBMIJzG1ooKTFFH3cTyIFCxC_Ra5I0di9tx-jB8QY9brgf0OkUufzYbcqHkuu9i0mL96v50H-sIULpabCKcILh4_dTzihfLrZDjHSggRxTBcXttvaHDndu4UjRKTWa7woIZVLqXn9KtO-4ihGi2A3Wtt-wB-Ghb_j-gCcMNH-TLEoWJNYbTe_uQJKvFsfa5-PkZ4VhuBwHO0aXoOXWcjJOcvVQgu0kSd6OigXweADG3UouxBSqVhP6-Nw0svg6rYiLQ_8nm_xsM0ag");'></div>
+            </div>
+        </header>
+        <main class="shop-main">
+            <div class="shop-header-section">
+                <h1 class="page-title">Shop</h1>
+                <div class="category-filters">
+                    <button class="category-btn">
+                        All
+                        <span class="material-symbols-outlined">expand_more</span>
+                    </button>
+                    <button class="category-btn">
+                        Clothing
+                        <span class="material-symbols-outlined">expand_more</span>
+                    </button>
+                    <button class="category-btn">
+                        Electronics
+                        <span class="material-symbols-outlined">expand_more</span>
+                    </button>
+                    <button class="category-btn">
+                        Home Decor
+                        <span class="material-symbols-outlined">expand_more</span>
+                    </button>
+                </div>
+            </div>
+            <div class="search-section">
+                <label class="main-search">
+                    <span class="material-symbols-outlined main-search-icon">search</span>
+                    <input class="main-search-input" placeholder="Search for items..." value=""/>
+                </label>
+                <div class="layout-toggle">
+                    <div class="layout-option">
+                        <input checked="" name="layout" type="radio" value="Grid" />
+                        <div class="layout-label">Grid</div>
+                    </div>
+                    <div class="layout-option">
+                        <input name="layout" type="radio" value="List" />
+                        <div class="layout-label">List</div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBTJuGr0jfVvmByZZX18FZDfjZwvmDlyN1cjgRUGvoLtiIX_Mth3NC-KzslIMB6FsNdHrS6Ttgi3iLKbLxSUUSRwSYItChbdQfUQARz_deWUDmtTfk1YUnCBxu9B_2IFaw0m9Rebq7S0mYbywSqMwrvjFwcTARNpb_kHZgxEYjJvvhML8Li2JFn0LDqwoUkypKR-HUsI8REixY274WwyExiVpuN13MFqdRRCrhTrpOl14dlJcigwRwht5F8CJDbsThHuDAY7XvGTmg");'></div>
+                    <div class="product-info">
+                        <h3 class="product-title">Vintage Leather Jacket</h3>
+                        <p class="product-price">$85</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC6Y4FVnP9UA3hLkW9QKclXJmkndLk9JK_-bvjoMsRm9_aX9kNoDZAe53WxCJvpfzadOahW_c5vRV0L9OhLw-cQo3Csq2c-RSzoA_e77Rhmk6zQ01O3WQQlodKlHHXQ2TlGGIc7IrnoDjwGAVDnFwy5NDgu1x2OMQATcTIS3DpkXWRw6hi7WaH8Y641jKFSEmq1gPIN-vpdLmZw_eeFVHYJukOWwCdRTHc-80McmXpXkvQz4qViS5-OJNwd_Y7iX4kEDX3-LwQjvaE");'></div>
+                    <div class="product-info">
+                        <h3 class="product-title">Wireless Noise-Canceling Headphones</h3>
+                        <p class="product-price">$150</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDZilV6Xh_kAiY-jxCt_K1vp1q6-4RdmSxGDQvRldDcBvz-s9pGoqRMPyBxcTujSyCDP6eDxuB0_26XRlMhmbQgNCutJbl2TcFqpqJN98RWE-5Wir_9FwPLXdzAmrhhyUvLEapKhAVsMBCB_ro_-szEnfWBnDqmMAjsSJkLQAcHP6ZjdidtPExcAmFJV2WnGDpgrpYZFrq5HxI7VFZN93EqiTLNQD7xfdsmSy5jPdAaqanj38DgFoc1f4cazXVvyMFgkjkzc0JNSq4");'></div>
+                    <div class="product-info">
+                        <h3 class="product-title">Handmade Ceramic Vase</h3>
+                        <p class="product-price">$45</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBSVloPKIw-MF5Jh7IEgkgL1KQmOAhr-nwhz7C-2pueUE-nPQZHx2sm7aAaEZlMLlh1-pqwR98BF-IPqhn1K4spD5L6hg7t2zvmDfZe7gtqqXHGwDYqKFFbYts1wkZKFPSM7LoyzNkonYSkJB8tGU4z5RAepS2VMfpvNdOs8tb0ubQjfc1UvxceJrcsbNeeqlRu2wGjIEDVAaNnmktX2xNPq0CxLrMbnm7bJORmyeEYYZ6soxzzp0gr5LF-VdQ2yQZolAW6l62ADM4");'></div>
+                    <div class="product-info">
+                        <h3 class="product-title">Cozy Knit Blanket</h3>
+                        <p class="product-price">$60</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAh3wCpspTcD56mQ1JwwQcKzp89S-01ViNHx7KG0LC0avGGa8b3G7Ce-XfmVZwcGGDk5EO97Qd7C2ZRZ15iLmIWMeM-U9ZIMWhzyEGthGsDqpT4RZzG6ToWBS0HTEqaY7eUgPdPT0BW14854uHKoIONsnIHNi9d-UxzUMClkSGkHoPUTIxH3zE7D-ll1rDbIJtnp4bST6DG-6EAVYVW6UBf2pET_IA17n3x3OQ0VqUgn3ZKPsrh1v8CS897v1mIeti2xX-DC7r0N0A");'></div>
+                    <div class="product-info">
+                        <h3 class="product-title">Retro Polaroid Camera</h3>
+                        <p class="product-price">$120</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCGl6DMzMjbG22HZEID7ujsEjZxpDrXAdaS3RdmlO1dm2MSyRxn_pfvd9hiySZnz3ccRzL4btS1dYnAh1LxjJX1bj_j8wb97AAt4Ik4nup3CB6DVrVjM-N8TuYHjjN6A-natb0Zj9xSiLjBowxbuyLGUm6nHCiSYnQoCHybsDSp1j-ITf0V6zjNpyF0xFY2Wv62-C4qgc2rkDYsbfEpm_WxRnV4c5qs2EN6q-vTaDiavNbOg7IuXMkmCf67BwG6-2CDPqxxl_e_D-4");'></div>
+                    <div class="product-info">
+                        <h3 class="product-title">Minimalist Wall Art</h3>
+                        <p class="product-price">$30</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAaj0w4V-txtkyeuUdi_X2jcjwuLSVV8-SurkT87IHJpKKdnKj69AlWIrLXMSWLBBJ3MimAjrPllMc2RGK7zB04ItFcPbO1N-I6S1qWtb7cQR64k94kwPNmjb_WOx43C3oOWRtL_-EM9YINkN9g-ROB9HGl_iPH4e9Ca2lMhg1gw8oHMqG_07tWnb4CndRC0xqr7bDr4a6Bk1nDvryWJaas7Ui7TbjJMA-e32VbSaadT0S5ifC1K2A1ACD5L7JrbWCYWCoW192jJpo");'></div>
+                    <div class="product-info">
+                        <h3 class="product-title">Sustainable Bamboo Cutting Board</h3>
+                        <p class="product-price">$25</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBrTvDOJoenM9QzvCnByvRVKGjZBH-d-LY3CoDIK_SXHrQZPA1bEZTcTiHflDmqkKp06E1tXSaz6JCE_Ho5j71D7eonkwQbWAY1BkOcEqWJmRCvGglwqijUl5GIJI0MxDv12XTFXrQTXESKsZWgtoYHMZQc7mQFjTSrpz3IRd1AmRcyfGC13Mh7IOe6qMR0LeNo9MGPYSPr4uBYTHiPO3j93vt343e7yVbeZa3koQU_6OUEOiJnsTqgIYow-eGVOmbIyl-PZeyu-hA");'></div>
+                    <div class="product-info">
+                        <h3 class="product-title">Organic Cotton T-Shirt</h3>
+                        <p class="product-price">$35</p>
+                    </div>
+                </div>
+            </div>
+            <div class="pagination-section">
+                <nav aria-label="Pagination" class="pagination-nav">
+                    <a class="pagination-btn" href="#">
+                        <span class="material-symbols-outlined">chevron_left</span>
+                    </a>
+                    <a class="pagination-btn active pagination-number" href="#">1</a>
+                    <a class="pagination-btn pagination-number" href="#">2</a>
+                    <a class="pagination-btn pagination-number" href="#">3</a>
+                    <a class="pagination-btn pagination-number" href="#">4</a>
+                    <a class="pagination-btn pagination-number" href="#">5</a>
+                    <a class="pagination-btn" href="#">
+                        <span class="material-symbols-outlined">chevron_right</span>
+                    </a>
+                </nav>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Layout toggle functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const layoutOptions = document.querySelectorAll('input[name="layout"]');
+            const productGrid = document.querySelector('.product-grid');
+            const layoutLabels = document.querySelectorAll('.layout-label');
+
+            // Add click handlers to labels as well for better UX
+            layoutLabels.forEach(label => {
+                label.addEventListener('click', function() {
+                    const input = this.previousElementSibling;
+                    if (input && input.type === 'radio') {
+                        input.checked = true;
+                        // Trigger change event
+                        const event = new Event('change', {
+                            bubbles: true
+                        });
+                        input.dispatchEvent(event);
+                    }
+                });
+            });
+
+            // Handle layout change
+            layoutOptions.forEach(option => {
+                option.addEventListener('change', function() {
+                    console.log('Layout changed to:', this.value); // Debug log
+
+                    if (this.checked) {
+                        if (this.value === 'List') {
+                            productGrid.classList.add('list-view');
+                            console.log('Added list-view class'); // Debug log
+                        } else {
+                            productGrid.classList.remove('list-view');
+                            console.log('Removed list-view class'); // Debug log
+                        }
+                    }
+                });
+            });
+
+            // Set initial state
+            const checkedOption = document.querySelector('input[name="layout"]:checked');
+            if (checkedOption && checkedOption.value === 'List') {
+                productGrid.classList.add('list-view');
+            }
+        });
+    </script>
+
+</body>
+
+</html>
