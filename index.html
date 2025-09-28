@@ -78,61 +78,84 @@
     <!-- Supabase Library -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js" defer></script>
 
-    <!-- Supabase Authentication Script -->
-    <script>
-        // Wait for both DOM and Supabase library to load
-        window.addEventListener('load', function() {
-            // Check if Supabase is available
-            if (typeof supabase === 'undefined') {
-                console.error('Supabase library not loaded');
+   <!-- Supabase Authentication Script -->
+<script>
+    // Wait for both DOM and Supabase library to load
+    window.addEventListener('load', function() {
+        // Check if Supabase is available
+        if (typeof supabase === 'undefined') {
+            console.error('Supabase library not loaded');
+            return;
+        }
+
+        // Initialize Supabase
+        const supabaseClient = supabase.createClient(
+            'https://aghqftkufpybciyadqil.supabase.co',
+            'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFnaHFmdGt1ZnB5YmNpeWFkcWlsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTg3MjYyOTYsImV4cCI6MjA3NDMwMjI5Nn0.6MtS_M_T8mfO-V7p6wJSNo3Ub79i4oxnZbAegmGBCBs'
+        );
+
+        console.log('Supabase client initialized:', supabaseClient);
+
+        // Handle email/password signup
+        document.querySelector('.btn-submit').addEventListener('click', async function() {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            
+            if (!email || !password) {
+                alert('Please fill in all fields');
                 return;
             }
+            
+            this.disabled = true;
+            this.textContent = 'Creating Account...';
+            
+            const { data, error } = await supabaseClient.auth.signUp({
+                email,
+                password
+            });
+            
+            if (error) {
+                alert('Error: ' + error.message);
+                this.disabled = false;
+                this.textContent = 'Create Account';
+            } else {
+                window.location.href = 'homepage/home-page.html';
+            }
+        });
 
-            // Initialize Supabase
-            const supabaseClient = supabase.createClient(
-                'https://aghqftkufpybciyadqil.supabase.co',
-                'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFnaHFmdGt1ZnB5YmNpeWFkcWlsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTg3MjYyOTYsImV4cCI6MjA3NDMwMjI5Nn0.6MtS_M_T8mfO-V7p6wJSNo3Ub79i4oxnZbAegmGBCBs'
-            );
-
-            // Handle email/password signup
-            document.querySelector('.btn-submit').addEventListener('click', async function() {
-                const email = document.getElementById('email').value;
-                const password = document.getElementById('password').value;
+        // Handle Google signup - Fixed version
+        document.querySelector('.btn-google').addEventListener('click', async function() {
+            try {
+                console.log('Google button clicked');
+                console.log('Supabase auth object:', supabaseClient.auth);
                 
-                if (!email || !password) {
-                    alert('Please fill in all fields');
+                // Check if signInWithOAuth method exists
+                if (typeof supabaseClient.auth.signInWithOAuth !== 'function') {
+                    console.error('signInWithOAuth is not available');
+                    alert('Google sign-in is not properly configured');
                     return;
                 }
                 
-                this.disabled = true;
-                this.textContent = 'Creating Account...';
-                
-                const { data, error } = await supabaseClient.auth.signUp({
-                    email,
-                    password
+                const { data, error } = await supabaseClient.auth.signInWithOAuth({
+                    provider: 'google',
+                    options: {
+                        redirectTo: window.location.origin + '/homepage/home-page.html'
+                    }
                 });
                 
-                if (error) {
-                    alert('Error: ' + error.message);
-                    this.disabled = false;
-                    this.textContent = 'Create Account';
-                } else {
-                    window.location.href = 'homepage/home-page.html';
-                }
-            });
-
-            // Handle Google signup
-            document.querySelector('.btn-google').addEventListener('click', async function() {
-                const { data, error } = await supabaseClient.signInWithOAuth({
-                    provider: 'google'
-                });
+                console.log('OAuth response:', data, error);
                 
                 if (error) {
-                    alert('Error: ' + error.message);
+                    console.error('Google OAuth error:', error);
+                    alert('Google sign-in error: ' + error.message);
                 }
-            });
+            } catch (err) {
+                console.error('Google signup error:', err);
+                alert('Failed to initiate Google sign-in: ' + err.message);
+            }
         });
-    </script>
+    });
+</script>
 
     <!-- Your existing password toggle script -->
     <script>
